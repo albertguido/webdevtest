@@ -1,0 +1,29 @@
+body{
+	background-color: black;
+	background-image: url(/assets/container.png), url(/assets/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.content{
+	color: white;
+	
+	width: 470px;
+	margin-left: 32%;
+}
+
+.text-content{
+	background-color: black;
+	display: block;
+	overflow: auto;
+	border-style: groove;
+}
+
+.footer{
+	background-color: black;
+	
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 80px;
+}

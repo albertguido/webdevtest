@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webdevtest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="header">
+		<img src="/assets/nav.png" style="margin-top: -8px; margin-left: 35%; height: 50px; width: 400px; " />
+		<img src="/assets/logo_garena_gold.png" style=" margin-left: 42%; height: 200px; width: 200px; " />
+		<!-- <img src="/assets/rectangle_gold.png" style=" margin-left: 42%; height: 200px; width: 200px; " /> -->
+	</div>
+	
+	<div class="content">
+		<%= yield %>
+	</div>
+
+	<div class="footer">
+		<img src="/assets/logo_garena.png" style="height: 100px; width: 200px; margin-left: 30%; margin-top: -10px " />
+		<img src="/assets/logo_fb.png" style="height: 20px; width: 20px; margin-left: 15%; margin-bottom: 40px; " />
+		<img src="/assets/logo_tw.png" style="height: 20px; width: 20px; margin-bottom: 40px; " />
+		<img src="/assets/logo_yt.png" style="height: 20px; width: 20px; margin-bottom: 40px; " />
+	</div>
+</body>
+</html>

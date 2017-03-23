@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tournament_id: 1
+  team_name: MyString
+  user_id: 1
+  member_name: MyString
+  member_phone: MyString
+  gender: MyString
+
+two:
+  tournament_id: 1
+  team_name: MyString
+  user_id: 1
+  member_name: MyString
+  member_phone: MyString
+  gender: MyString

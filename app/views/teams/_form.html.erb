@@ -1,0 +1,55 @@
+<%= form_for(@team) do |f| %>
+  <% if @team.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@team.errors.count, "error") %> prohibited this team from being saved:</h2>
+
+      <ul>
+      <% @team.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tr>
+      <td><%= f.label :team_name %><br></td>
+      <td><%= f.text_field :team_name %></td>
+    </tr>
+    <tr>
+      <td>Nama Captain<br></td>
+      <%= f.hidden_field :user_id, :value => @user.id %>
+      <td><input type="text" value="<%= @user.name %>" disabled/></td>
+    </tr>
+    <tr>
+      <td>No. Telepon<br></td>
+      <td><input type="text" value="<%= @user.phone %>" disabled/></td>
+    </tr>
+    <tr>
+      <td>Jenis Kelamin</td>
+      <td><input type="text" value="<%= @user.gender %>" disabled></td>
+    </tr>
+    <tr>
+      <td><%= f.label :member_name %><br></td>
+      <td><%= f.text_field :member_name %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :member_phone %><br></td>
+      <td><%= f.text_field :member_phone %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :gender %><br></td>
+      <td><%= f.select(:gender) do %>
+          <% [['Men'], ['Women']].each do |c| %>
+            <%= content_tag(:option, c.first) %>
+          <% end %>
+          <% end %>
+      </td>
+    </tr>
+    <tr><td><input type="checkbox" />
+      Saya telah membaca dan menerima <%= link_to 'Syarat dan Ketentuan', new_team_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#modal-window'}  %> dari turnamen ini
+    </td></tr>
+    <tr><td><%= f.submit %></td></tr>
+
+  </table>
+<% end %>
